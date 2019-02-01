@@ -6,8 +6,7 @@ total = header
 for i in range(0,500):
     line = ""
     for j in range(0,500):
-        line += str(j*random.randrange(100)%256) + " "
+        line += "{} {} {} ".format((j+random.randrange(100))%256, (j-random.randrange(100))%256, (j*random.randrange(100))%256)
     total += line + "\n"
 
-print(total)
 f.write(total)
